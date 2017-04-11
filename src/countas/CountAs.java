@@ -10,6 +10,7 @@ import java.util.List;
  * Created by Bálint on 2017. 04. 11..
  */
 public class CountAs {
+  public static final String folder = "countas/";
 
   public static void main(String[] args) {
     // Create a function that takes a filename as string parameter,
@@ -23,7 +24,7 @@ public class CountAs {
 
   public static int allAs(String filename) {
     int as = 0;
-    Path filePath = Paths.get("countas/" + filename);
+    Path filePath = Paths.get(folder + filename);
     try {
       List<String> lines = Files.readAllLines(filePath);
       char[] chars = lines.toString().toLowerCase().toCharArray();
