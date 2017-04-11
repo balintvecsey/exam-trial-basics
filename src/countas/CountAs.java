@@ -18,9 +18,7 @@ public class CountAs {
 
     // example: on the input "afile.txt" the function should return 28 - print this result
     // example: on the input "not-a-file" the function should return 0 - print this result
-
     System.out.println(allAs("afile.txt"));
-
   }
 
   public static int allAs(String filename) {
@@ -28,9 +26,7 @@ public class CountAs {
     Path filePath = Paths.get("countas/" + filename);
     try {
       List<String> lines = Files.readAllLines(filePath);
-
       char[] chars = lines.toString().toLowerCase().toCharArray();
-
       for (int i = 0; i < chars.length; i++) {
         if (chars[i] == 'a') {
           as++;
@@ -42,4 +38,3 @@ public class CountAs {
     return as;
   }
 }
-
